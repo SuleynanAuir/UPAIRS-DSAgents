@@ -16,43 +16,47 @@
 - Issue: [GitHub Issues](https://github.com/SuleynanAuir/MARDS-v2/issues)
 - Email: suleynanaiur@gmail.com
 
-- Language: [中文文档](./README_CN.md) | [English Documentation](./README_EN.md)
+- Language: [中文文档](asserts/README_CN.md) | [English Documentation](asserts/README_EN.md)
+
+- Time Update: 2026-03-01
 
 ---
 
 ## 📊 Demo Statistic Report
 
-[![Full Demo Report](https://img.shields.io/badge/📊_查看完整演示报告-点击打开-brightgreen?style=for-the-badge)](./DEMO_REPORT.md)
+> *Prompt: "Artificial Intelligence Ethics"*
 
-> 基于真实运行数据的详细指标分析报告，展示系统核心能力与性能指标
+[![Full Demo Report](https://img.shields.io/badge/📊_查看完整演示报告-点击打开-brightgreen?style=for-the-badge)](asserts/DEMO_REPORT.md)
+
+
 
 ---
 
 <div align="center">
 
-**Figure 1: MARDS v2 System Architecture Overview**
 
-![MARDS v2 System Architecture](./nano-banana-pro-9PAI8HRRN0BvYYEh1WSex.png)
 
-*8-Agent Collaborative Pipeline with Iterative Reflection & Uncertainty Quantification*
+![MARDS v2 System Architecture](asserts/nano-banana-pro-9PAI8HRRN0BvYYEh1WSex.png)
+**Figure 1: UPAIRS-DS Architecture**: *Agents Collaboration with Iterative Reflection & Uncertainty Quantify*
 
 </div>
 
 ---
 
-A comprehensive multi-agent system for conducting deep, reflective research with structured section-wise processing, iterative reflection loops, and uncertainty quantification.
+## 🔍 Core Innovations
 
-**核心创新点标签**:
+**1.核心创新点标签**:
 
 🔄 `段落级迭代反思` | 🎯 `反思压力模型` | 🧠 `8智能体协作` | 📊 `不确定性量化` | ⚡ `智能预算分配` | 🎨 `源质量评分` | 🔍 `去噪重排序`
 
-**8个Agents身份标识**:
+**2. 8个Agents身份标识**:
 
 🧭 `结构规划Agent` | 🔎 `段落检索Agent` | 📝 `段落总结Agent` | 🪞 `反思评估Agent` | 🛠️ `段落更新Agent` | 🌐 `全局不确定性Agent` | 📦 `最终格式化Agent` | 🎛️ `控制编排Agent`
 
-[English](./README_EN.md) | 中文
 
-## 核心技术栈
+---
+
+## 🛠️ Core Technology Stack
 
 `Python` · `asyncio` · `aiohttp` · `pydantic` · `LLM编排` · `Prompt Engineering` · `Tavily API` · `DeepSeek API` · `不确定性量化` · `NDCG/MRR评估` · `Conda` · `Shell自动化`
 
@@ -66,29 +70,29 @@ A comprehensive multi-agent system for conducting deep, reflective research with
 | 工程交付 | 一键脚本、环境引导、确定性模式 | 工程落地与可复现交付能力 |
 
 
-> 📖 **Complete Documentation**: For comprehensive technical documentation including deployment guides, agents framework architecture, innovations, and computational logic, please refer to:
-> - [中文完整文档 (Chinese Full Documentation)](./README_CN.md)
-> - [English Full Documentation](./README_EN.md)
+
 
 > ✅ 2026-03 更新：当前默认入口已切换到 `controller_fast.py`（`main.py` 内部已使用），以下“快速使用”与现有代码保持一致。
 
-## 快速使用（当前推荐）
+## 📦 Quick Start (Recommended)
 
 ### 1) 安装依赖
 
 ```bash
 cd .
-pip install -r v2_paragraph_reflective/requirements.txt
+conda create -n multiAgents python=3.10 -y
+conda activate multiAgents
+pip install -r ./requirements.txt
 ```
 
 ### 2) 运行（请用模块方式）
 
 ```bash
 cd .
-python3 -m v2_paragraph_reflective.main \
+python3 -m .main \
   --deepseek_key "<YOUR_DEEPSEEK_KEY>" \
   --tavily_key "<YOUR_TAVILY_KEY>" \
-  --query "人工智能伦理" \
+  --query "THINGS-TO-SEARCH" \
   --max_reflection_loops 1 \
   --log_level INFO
 ```
@@ -134,7 +138,8 @@ python3 -m py_compile \
 
 - 本 README 下方历史内容保留用于参考；若与本节冲突，请以本节与代码实现为准。
 
-## Features
+---
+## 🛠️ History
 
 - **Multi-Agent Architecture**: 8 specialized agents for different research tasks
 - **Paragraph-level Reflection**: Iterative refinement of each section with up to 3 reflection loops
@@ -196,49 +201,11 @@ Output: Markdown report with:
 - References
 ```
 
-## Installation
 
-### Requirements
 
-- Python 3.10+
-- asyncio (built-in)
-- aiohttp (for async HTTP)
-- pydantic (for type validation)
 
-### Setup
 
-```bash
-# Install dependencies
-pip install aiohttp pydantic
 
-# Clone repository
-cd mards/v2_paragraph_reflective
-
-# Set API keys
-export DEEPSEEK_API_KEY="your-deepseek-key"
-export TAVILY_API_KEY="your-tavily-key"
-```
-
-## Usage
-
-### Command Line
-
-```bash
-python main.py \
-  --deepseek_key "sk-xxxxxxxxxxxxxxxx" \
-  --tavily_key "tvly-xxxxxxxxxxxxxxx" \
-  --query "什么是量子计算？"
-
-# Optional parameters
-python main.py \
-  --deepseek_key "sk-xxxxxxxxxxxxxxxx" \
-  --tavily_key "tvly-xxxxxxxxxxxxxxx" \
-  --query "气候变化的影响" \
-  --max_reflection_loops 5 \
-  --uncertainty_threshold 0.15 \
-  --results_dir "./research_results" \
-  --log_level DEBUG
-```
 
 ### Python API
 
