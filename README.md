@@ -1,4 +1,4 @@
-# UPARIS-DS: Uncertainty-Aware Paragraph-Level Iterative Reflective Search
+# UPARIS-DS: Uncertainty-Aware Paragraph-Level Iterative Reflective Deep Search Agents Collaboration
 
 <!-- 项目基础信息 -->
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](./README.md)
